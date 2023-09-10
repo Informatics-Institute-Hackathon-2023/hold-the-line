@@ -5,6 +5,8 @@ Infection of venous catheters are a significant problem in hospitals.
 
 Our goal is look at potential indicators and predictors of venous catheter infections.
 
+## Investigation of Data
+
 Our initial data survey was conducted in UAB's i2b2. We queried for a case cohort of patients with infected catheters and a control cohort of patients that had catheters, but had no infection. ICD-10 and CPT codes were determined, with guidance from Amy Wang, using the i2b2 concept browser and search features.
  * Query Terms 
     * Dx of infection: 
@@ -46,15 +48,17 @@ We there for sought external datasets to use to prototype the analysis.
      * public
          * MIMIC-III-DEMO: https://physionet.org/content/mimiciii-demo/1.4/
             * N=100
-	    * this data set uses ICD-9 codes, and appears NOT to have any cases of catheter infection
-            * [Explore-MIMIC-III-DEMO.ipynb](physionet/public/Explore-MIMIC-III-DEMO.ipynb)
-              [Explore-MIMIC-III-DEMO.ipynb.pdf](physionet/public/Explore-MIMIC-III-DEMO.ipynb.pdf)
+            * this data set uses ICD-9 codes, and appears NOT to have any cases of catheter infection
+                * [Explore-MIMIC-III-DEMO.ipynb](physionet/public/Explore-MIMIC-III-DEMO.ipynb)
+                *  [Explore-MIMIC-III-DEMO.ipynb.pdf](physionet/public/Explore-MIMIC-III-DEMO.ipynb.pdf)
          * MIMIC-IV-DEMO: https://physionet.org/content/mimic-iv-demo/2.2/
             * N=100
             * this data set uses ICD-9 and ICD-10 codes, and appears to have 2 individuals with catheter infection
-            * [Explore-MIMIC-IV-DEMO.ipynb](physionet/public/Explore-MIMIC-IV-DEMO.ipynb)
-              [Explore-MIMIC-IV-DEMO.ipynb.pdf](physionet/public/Explore-MIMIC-IV-DEMO.ipynb.pdf)
+              * [Explore-MIMIC-IV-DEMO.ipynb](physionet/public/Explore-MIMIC-IV-DEMO.ipynb)
+              * [Explore-MIMIC-IV-DEMO.ipynb.pdf](physionet/public/Explore-MIMIC-IV-DEMO.ipynb.pdf)
          * MIMIC-IV-DEMO-OMOP: https://physionet.org/content/mimic-iv-demo-omop/0.9
+            * not investigated
      * Credentialed 
          * MIMIC-IV: https://physionet.org/content/mimiciv/2.2/
 
+## Analysis
