@@ -1,4 +1,4 @@
-# hold-the-line
+`# hold-the-line
 Repository for "Hold the Line" project on central line infections
 
 Infection of venous catheters are a significant problem in hospitals. 
@@ -7,7 +7,7 @@ Our goal is look at potential indicators and predictors of venous catheter infec
 
 ## Investigation of Data
 
-Our initial data survey was conducted in UAB's i2b2. We queried for a case cohort of patients with infected catheters and a control cohort of patients that had catheters, but had no infection. ICD-10 and CPT codes were determined, with guidance from Amy Wang, using the i2b2 concept browser and search features.
+Our initial data survey was conducted in UAB's i2b2. We queried for a case cohort of patients with infected catheters and a control cohort of patients that had catheters, but had no infection. ICD-10 and CPT codes were determined, with guidance from Amy Wang, using the i2b2 concept browser and search features, as well as prompts to ChatGPT.
  * Query Terms 
     * Dx of infection: 
         * ICD-10: T80.21 - infection due to central venous catheter
@@ -60,5 +60,26 @@ We there for sought external datasets to use to prototype the analysis.
             * not investigated
      * Credentialed 
          * MIMIC-IV: https://physionet.org/content/mimiciv/2.2/
+            * N=40,000
+            * could not be accessed in this time-frame
+   * [Kaggle](https://www.kaggle.com)
+      * we searched here for a while, but did not identify any data sets that seemed useful for addressing this project. 
 
 ## Analysis
+
+We plan to run the analyses on [cheaha.rc.uab.edu](https://rc.uab.edu) in a python Jupyter notebook. Mentoring provided by Prashant Sharma.
+
+Tools Under consideration
+   * Xzboost (more scalable)
+   * random forest
+   * Linear regression (smaller data sets)
+   * Logistic regression (smaller data sets)
+
+Steps: 
+   * Data cleaning
+     * join tables from source to create a single file
+     * Data must have no missing values - filter
+     * Remove un-important columns 
+     * ideally, split dataset into 80% training, 20% test   
+   * build and train classification model on training set
+   * evaluate model on test set. 
